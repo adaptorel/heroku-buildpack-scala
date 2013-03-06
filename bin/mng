@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+install_mongo()
+{
+  cd $BUILD_DIR
+  MONGO_URL="https://github.com/adaptorel/mongo_2.3_binary/raw/master/mongo"
+  MONGO_FILE="mongo"
+  echo "-----> Installing mongo client..."
+  curl --silent --max-time 150 --location $MONGO_URL -o $MONGO_FILE
+  if [ ! -f $MONGO_FILE ]; then
+    echo "-----> Error downloading mongo 2.3 linux/64 client! Please try again..."
+    exit 1
+  fi
+  mkdir -p vendor/mongo-2.3
+  mv $MONGO_FILE vendor/mongo-2.3/$MONGO_FILE
+  chmod +x vendor/mongo-2.3/$MONGO_FILE
+  echo "-----> done installing mongo 2.3 linux/64 client."
+}

@@ -151,7 +151,7 @@ if is_play $BUILD_DIR && [ -d $SBT_USER_HOME/.ivy2 ] ; then
   rm -rf $SBT_USER_HOME/.ivy2 
 fi
 
-# wkhtmltopdf
+# mongo client
 cd $BUILD_DIR
-. $BIN_DIR/wk
-install_wkhtmltopdf
+. $BIN_DIR/mng
+install_mongo
