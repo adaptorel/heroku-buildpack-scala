@@ -3,9 +3,9 @@
 install_mongo()
 {
   cd $BUILD_DIR
-  MONGO_URL="https://github.com/adaptorel/mongo_2.3_binary/raw/master/mongo"
-  MONGO_FILE="mongo"
-  echo "-----> Installing mongo client..."
+  MONGO_URL="https://github.com/adaptorel/mongo_2.3_binary/raw/master/mongodump"
+  MONGO_FILE="mongodump"
+  echo "-----> Installing mongodump..."
   curl --silent --max-time 150 --location $MONGO_URL -o $MONGO_FILE
   if [ ! -f $MONGO_FILE ]; then
     echo "-----> Error downloading mongo 2.3 linux/64 client! Please try again..."
