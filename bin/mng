@@ -3,7 +3,7 @@
 install_mongo()
 {
   cd $BUILD_DIR
-  MONGO_URL="https://github.com/adaptorel/mongo_2.3_binary/raw/master/mongodump"
+  MONGO_URL="https://bitbucket.org/dorel/mongo_2.3_binary/raw/master/mongodump"
   MONGO_FILE="mongodump"
   echo "-----> Installing mongodump..."
   curl --silent --max-time 150 --location $MONGO_URL -o $MONGO_FILE
