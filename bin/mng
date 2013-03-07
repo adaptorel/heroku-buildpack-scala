@@ -14,5 +14,5 @@ install_mongo()
   mkdir -p vendor/mongo-2.3
   mv $MONGO_FILE vendor/mongo-2.3/$MONGO_FILE
   chmod +x vendor/mongo-2.3/$MONGO_FILE
-  echo "-----> done installing mongo 2.3 linux/64 client."
+  echo "-----> done installing mongodump 2.3 linux/64."
 }
