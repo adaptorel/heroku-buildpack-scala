@@ -195,10 +195,10 @@ cat << EOF > $profileScript
 export PATH="\$HOME/.sbt_home/bin:\$PATH"
 EOF
 
-# Move compiled app back to where Heroku expects it
-mv $BUILD_DIR $APP_BUILD_DIR
-
 # mongo client
 cd $BUILD_DIR
 . $BIN_DIR/mng
 install_mongo
+
+# Move compiled app back to where Heroku expects it
+mv $BUILD_DIR $APP_BUILD_DIR
